@@ -16,7 +16,16 @@ class CarsController < ApplicationController
     redirect_to cars_path, notice: 'the car was successfully deleted.'
   end
 
-  private
+  def create
+    @car = Car.new(car_params)
+    if @car.save
+      redirect_to car_path(@car)
+    else
+      render :new
+    end
+  end
+  
+  private 
 
   def find_index
     @car = Car.find(params[:id])
