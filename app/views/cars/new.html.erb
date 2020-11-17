@@ -1,0 +1,18 @@
+<div class="container">
+<div class="container-new-car"><h1>add car</h1></div>
+<div class="container form">
+<%= simple_form_for @car do |f| %>
+  <%= f.input :model %>
+   <%= f.input :price %>
+    <%= f.input :fuel_type %>
+     <%= f.input :consumption %>
+      <%= f.input :category %>
+       <%= f.input :seat_number %>
+        <%= f.input :transmission %>
+
+  <%= f.submit "Submit car", class: "btn btn-primary" %>
+<% end %>
+</div>
+
+</div>
+

@@ -1,26 +1,16 @@
-.topnav {
-  background-color: rgb(31, 31, 31);
-  overflow: hidden;
+
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: gray;
+
+  
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #e20707;
-  color: white;
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
 }
