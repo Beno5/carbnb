@@ -1,28 +1,19 @@
 <div class="container">
 
+  <h1>cars</h1>
 
-
-
-<h1>cars</h1>
-
-<div class="cards">
-<% @cars.each do |car| %>
-
-<%= link_to car_path(car) do %>
-  <div class="card-category"> 
-<div class="car-name-card"><%= car.model %></div>
-<div class="car-image-card">Image</div>
-<div class="car-info-card">
-<p><%= car.price %>€ pro Tag</p>
-<p><%= car.consumption %> l/km</p>
+  <div class="cards">
+    <% @cars.each do |car| %>
+      <%= link_to car_path(car) do %>
+        <div class="card-category"> 
+          <div class="car-name-card"><%= car.model %></div>
+          <div class="car-image-card">Image</div>
+          <div class="car-info-card">
+            <p><%= car.price %>€ pro Tag</p>
+            <p><%= car.consumption %> l/km</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
-  
-</div>
-<% end %>
-
-
-<% end %>
-</div>
-
-</div>
-

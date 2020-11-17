@@ -11,6 +11,11 @@ class CarsController < ApplicationController
     @car = Car.new
   end
 
+  def destroy
+    @car.destroy
+    redirect_to cars_path, notice: 'the car was successfully deleted.'
+  end
+
   def create
     @car = Car.new(car_params)
     if @car.save
@@ -20,14 +25,13 @@ class CarsController < ApplicationController
     end
   end
   
-  private 
+  private
 
   def find_index
     @car = Car.find(params[:id])
   end
 
   def car_params
-    params.require(:car).permit(:model, :price, :fuel_type, :consumption, :category, :seat_number, :transmission,)
+    params.require(:car).permit(:model, :price, :fuel_type, :consumption, :category, :seat_number, :transmission)
   end
 end
-

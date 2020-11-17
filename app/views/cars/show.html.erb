@@ -2,11 +2,21 @@
 
 
 
-<div class="car-container">
+  <div class="car-container">
+    <div class="card-product">
+      <%= image_tag("BMW_1.jpg") %>
+      <%# <img src="/assets/images/BMW_1.jpg" /> %>
+      <%# <img src="/assets/icon.png" /> %>
+      <%= @car.model %>
+      <%= @car.price %>
+      <%= @car.fuel_type %>
+      <%= @car.consumption %>
+      <%= @car.category %>
+      <%= @car.seat_number %>
+      <%= @car.transmission %>
+    </div>
+    <div class="card-booking">
 
-<%= @car.model %>
-
-
-
-</div>
+    </div>
+  </div>
 </div>
