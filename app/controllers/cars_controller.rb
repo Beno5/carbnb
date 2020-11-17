@@ -25,7 +25,7 @@ class CarsController < ApplicationController
     end
   end
   
-  private 
+  private
 
   def find_index
     @car = Car.find(params[:id])
