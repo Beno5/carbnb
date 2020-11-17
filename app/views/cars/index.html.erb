@@ -1,35 +1,30 @@
 <div class="container">
 
-<div class="topnav">
-  <%= link_to "Home", root_path %>
-  <%= link_to "Cars", cars_path %>
-  <a href="#add_car">Add Car</a>
-  <a href="#your_cars">Your Cars</a>
-  <a href="#your_bookings">Your bookings</a>
-  <a href="#" style="float:right"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Avatar" class="avatar"></a>
-</div>
+  <div class="topnav">
+    <%= link_to "Home", root_path %>
+    <%= link_to "Cars", cars_path %>
+    <a href="#add_car">Add Car</a>
+    <a href="#your_cars">Your Cars</a>
+    <a href="#your_bookings">Your bookings</a>
+    <a href="#" style="float:right"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Avatar" class="avatar"></a>
+  </div>
 
+  <h1>cars</h1>
 
-<h1>cars</h1>
-
-<div class="cards">
-<% @cars.each do |car| %>
-
-<%= link_to car_path(car) do %>
-  <div class="card-category"> 
-<div class="car-name-card"><%= car.model %></div>
-<div class="car-image-card">Image</div>
-<div class="car-info-card">
-<p><%= car.price %>€ pro Tag</p>
-<p><%= car.consumption %> l/km</p>
-</div>
-  
-</div>
-<% end %>
-
-
-<% end %>
-</div>
+  <div class="cards">
+    <% @cars.each do |car| %>
+      <%= link_to car_path(car) do %>
+        <div class="card-category"> 
+          <div class="car-name-card"><%= car.model %></div>
+          <div class="car-image-card">Image</div>
+          <div class="car-info-card">
+            <p><%= car.price %>€ pro Tag</p>
+            <p><%= car.consumption %> l/km</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 
 </div>
 

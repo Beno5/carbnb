@@ -24,8 +24,18 @@
 }
 
 .car-info-card {
-  padding-top: 30px;;
+  padding-top: 30px;
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+
+// SHOW
+.card-product img {
+  width: 100px;
+}
+
+.card-product {
+  width: 400px;
 }
