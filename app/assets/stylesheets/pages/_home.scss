@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.form-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-group-text{
+  height: 40px;
+  margin-top: 30px;
+}
