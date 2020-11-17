@@ -1,0 +1,20 @@
+<div class="container">
+
+<h1>cars</h1>
+
+<div class="cards">
+<% @cars.each do |car| %>
+<div class="card-category">
+<div class="car-name-card"><h5><%= car.model %></h5></div>
+<div class="car-image-card">Image</div>
+<div class="car-info-card">
+<p><%= car.price %></p>
+<p><%= car.consumption %></p>
+</div>
+  
+</div>
+
+<% end %>
+</div>
+
+</div>
