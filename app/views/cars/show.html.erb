@@ -1,25 +1,24 @@
 <div class="container">
 
-  <div class="car-container">
-    <div class="card-product">
-      <% if @car.photo.attached? %>
-        <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
+  <div class="car-container row">
+      <%# <% if @car.photo.attached? %>
+        <%# <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+      <%# <% end %>
       <div class="card-product" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @car.photo.key, height: 300, width: 400, crop: :fill %>')">
+        <%= @car.model %>
+        <%= @car.price %>
+        <%= @car.fuel_type %>
+        <%= @car.consumption %>
+        <%= @car.category %>
+        <%= @car.seat_number %>
+        <%= @car.transmission %>
+      </div>
 
-      <%= @car.model %>
-      <%= @car.price %>
-      <%= @car.fuel_type %>
-      <%= @car.consumption %>
-      <%= @car.category %>
-      <%= @car.seat_number %>
-      <%= @car.transmission %>
-    </div>
+      <div class="card-booking">
+        <p>Total price:</p>
+        <h2>123€</h2>
+        <%= link_to "Book", cars_path, class: "btn btn-primary" %>
 
-    <div class="card-booking">
-      <%= button_to "Book", XXXX_path, class: "btn-primary" %>
-    </div>
-
-    </div>
+      </div>
   </div>
 </div>
