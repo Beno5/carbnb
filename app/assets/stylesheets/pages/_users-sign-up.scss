@@ -20,7 +20,7 @@ form {
     color: darken(#e5e5e5, 50%);
     border-bottom: solid 1px #e5e5e5;
   }
-  input[type="submit"] {
+  .devise-button {
     background: $button;
     box-shadow: 0 3px 0 0 darken($button, 10%);
     border-radius: 2px;
@@ -35,10 +35,12 @@ form {
     padding: 0.8em 0;
     text-shadow: 0 1px #68b25b;
     width: 100%;
+    text-align: center;
   }
-  input[type="submit"]:hover {
+  .devise-button:hover {
     background: rgba(148, 175, 101, 1);
     text-shadow: 0 1px 3px darken($button, 30%);
+    text-decoration: none;
   }
 }
 
