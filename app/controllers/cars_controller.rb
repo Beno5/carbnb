@@ -10,20 +10,21 @@ class CarsController < ApplicationController
   def new
     @car = Car.new
   end
-
-  def destroy
-    @car.destroy
-    redirect_to cars_path, notice: 'the car was successfully deleted.'
-  end
-
+  
   def create
     @car = Car.new(car_params)
+    @car.user = current_user
     if @car.save
       redirect_to car_path(@car)
     else
       render :new
     end
   end
+  
+    def destroy
+      @car.destroy
+      redirect_to cars_path, notice: 'the car was successfully deleted.'
+    end
   
   private
 
