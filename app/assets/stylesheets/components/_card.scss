@@ -37,8 +37,33 @@
 }
 
 .card-product {
-  width: 400px;
+  width: 800px;
   height: 400px;
   background-size: cover;
   background-position: center;
+ 
+}
+
+.car-product-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.car-product-info-details {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+
+}
+
+.car-container-row {
+  width: 1000px;
+  display: flex;
+}
+
+.card-booking {
+  display: grid;
+ 
+  color: black;
 }
