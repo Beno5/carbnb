@@ -12,3 +12,11 @@
 @import "components/index";
 @import "pages/index";
 @import "components/footer";
+
+html * {
+    color: #FFF;
+}
+
+.container {
+    padding: 50px;
+}

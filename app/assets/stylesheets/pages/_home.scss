@@ -11,6 +11,9 @@
 
 .image-background  {
   height: 100vh;
-  // background-size: cover;
 }
 
+.input-group {
+  display: flex;
+  flex-direction: row;
+}
