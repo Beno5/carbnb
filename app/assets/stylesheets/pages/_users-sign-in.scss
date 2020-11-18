@@ -1,12 +1,74 @@
+$button: rgba(148, 186, 101, 0.7);
 
-input[type="remember_me"] {
-  display: inline-block;
-  padding-right: 10px;
-  white-space: nowrap;
+body {
+  background: #384047;
+  font-family: sans-serif;
+  font-size: 10px;
 }
-.checkboxes input {
-  vertical-align: middle;
-}
-.checkboxes label span {
-  vertical-align: middle;
+form {
+  background: #fff;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 50px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 2px;
+  h2 {
+    margin: 0 0 50px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: darken(#e5e5e5, 50%);
+    border-bottom: solid 1px #e5e5e5;
+  }
+  .devise-button {
+    background: $button;
+    box-shadow: 0 3px 0 0 darken($button, 10%);
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    line-height: 1.6em;
+    margin: 2em 0 0;
+    outline: none;
+    padding: 0.8em 0;
+    text-shadow: 0 1px #68b25b;
+    width: 100%;
+    text-align: center;
+  }
+  .devise-button:hover {
+    background: rgba(148, 175, 101, 1);
+    text-shadow: 0 1px 3px darken($button, 30%);
+    text-decoration: none;
+    color: black;
+  }
+  .small-button {
+    background: darkgreen;
+    box-shadow: 0 3px 0 0 darken($button, 10%);
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 2em 0 0;
+    outline: none;
+    padding: 0.8em 0;
+    text-shadow: 0 1px #68b25b;
+    width: 40%;
+    text-align: center;
+  }
+  .small-button:hover {
+    background: rgba(148, 175, 101, 1);
+    text-shadow: 0 1px 3px darken($button, 30%);
+    text-decoration: none;
+    color: black;
+  }
+  .display-flex {
+    display: flex;
+    justify-content: space-evenly;
+    width: 315px;
+  }
 }
