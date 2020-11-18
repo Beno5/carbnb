@@ -2,3 +2,13 @@
 @import "home";
 @import "index-page-cars";
 @import "users-sign-up";
+
+
+// general scss
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.container {
+  min-height: 100%;
+}
