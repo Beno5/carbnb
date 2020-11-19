@@ -8,15 +8,19 @@ body{
   background:#ecf0f1
 }
 .mainContainer {
-  width: 350px;
+  width: auto;
   height: 590px;
   margin: 0 auto;
   box-shadow:0 0 10px #2323;
   margin-top: 50px;
-  background:white;
+	background:white;
+	position: absolute;
+	left: 0px;
+	right: 0px;
 }
 .cardHolder {
-  height: 300px;
+	height: 300px;
+	width: auto;
   background: linear-gradient(
     to right,
     #6480ef,
@@ -50,7 +54,7 @@ body{
 }
 .card{
   height:180px;
-  width:280px;
+  width:auto;
   background:white;
   margin:0 auto;
   border-radius:1.2em;
@@ -102,7 +106,7 @@ body{
 }
 .status{
   height:35px;
-  width:300px;
+  width:auto;
   margin:0 auto;
   box-shadow:0 0 10px #2323; 
   margin-top:16px;
@@ -127,10 +131,10 @@ h5{
   margin-bottom:12px;
 }
 .options{
-  width:250px;
+  width:auto;
   height:75px;
   margin:0 auto;
-  justify-content:space-between;
+  justify-content:center;
 }
 .options > .opt{
   height:75px;

@@ -2,9 +2,12 @@
   float: left;
   width: 50%;
   border: 15px solid rgb(221, 114, 16);
-  padding: 50px;
+  padding: 0px;
   margin: 20px;
   box-shadow: 0 0 1em #222;
+  height: 900px;
+  position: relative;
+  display: table;
 }
 
 .column2 {
@@ -13,6 +16,9 @@
   padding: 50px;
   margin: 20px;
   box-shadow: 0 0 1em #222;
+  height: 900px;
+  position: relative;
+  display: inline-block;
 }
 
 .bold-text {
@@ -24,7 +30,7 @@ h1 {
   padding: 10px;
   text-align: center;
   font-size: 30px;
-  color: darken(#e5e5e5, 50%);
+  color: black;
   border-bottom: solid 1px #e5e5e5;
 }
 

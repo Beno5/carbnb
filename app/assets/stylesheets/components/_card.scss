@@ -64,7 +64,7 @@
   height: 400px;
   background-size: cover;
   background-position: center;
- 
+  box-shadow: 0 0 1em #222;
 }
 
 .car-product-info {
@@ -101,4 +101,13 @@
 .card-booking a {
   margin: 60px 10px 0px 10px;
   padding: 40px 0px 0px 0px;
+}
+
+.column-card-book {
+  width: 40%;
+  border: 15px solid rgb(221, 114, 16);
+  padding: 50px;
+  margin: 0px;
+  box-shadow: 0 0 1em #222;
+  color: black;
 }

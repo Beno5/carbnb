@@ -16,12 +16,17 @@
   <div class="cards">
     <% @cars.each do |car| %>
       <%= link_to car_path(car) do %>
+
         <div class="Card"> 
           <h2 class="Card__name"><%= car.model %></h2>
           <% if car.photo.attached? %>
-          <div class="Card__image" style="background: url(<%= asset_path 'car_river.jpg' %>)">
-            # <%= cl_image_tag car.photo.key, height: 80, width: 150, crop: :fill %></div><% end %>
+          <div class="Card__image" style="background: url(<%= cl_image_tag car.photo.key, height: 80, width: 150, crop: :fill %>)">
+             </div><% end %>
           <div class="Card__info">
+
+          
+         
+
             <p><%= car.price %>€ pro Tag</p>
             <p><%= car.consumption %> l/km</p>
           </div>
