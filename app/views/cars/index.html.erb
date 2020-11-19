@@ -13,21 +13,20 @@
 <% end %>
 
 <div class="index-container">
-
-
-     
   <div class="cards">
     <% @cars.each do |car| %>
       <%= link_to car_path(car) do %>
-        <div class="card-category"> 
-          <div class="car-name-card"><%= car.model %></div>
-           <div class="car-image-card"> 
-           <% if car.photo.attached? %>
-             <%= cl_image_tag car.photo.key, height: 80, width: 150, crop: :fill %>
-             
-           <% end %>
-           </div>
-          <div class="car-info-card">
+
+        <div class="Card"> 
+          <h2 class="Card__name"><%= car.model %></h2>
+          <% if car.photo.attached? %>
+          <div class="Card__image" style="background: url(<%= cl_image_tag car.photo.key, height: 80, width: 150, crop: :fill %>)">
+             </div><% end %>
+          <div class="Card__info">
+
+          
+         
+
             <p><%= car.price %>€ pro Tag</p>
             <p><%= car.consumption %> l/km</p>
           </div>
@@ -36,11 +35,22 @@
     <% end %>
   </div>
 
-  <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-     </div>
+    <div class="cards">
+      <div class="Card">
+        <div class="Card__image" style="background: url(<%= asset_path 'car_river.jpg' %>)">
+          <h2>car.model</h2>
+        </div>
+        <div class="Card__info">
+          <p>car.price pro Tag</p>
+          <p>car.consumption l/km</p>
+        </div>
+      </div>
+    </div>
+
+  <div id="map" style="width: 100%; height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
 
 
