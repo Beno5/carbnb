@@ -2,7 +2,20 @@ class CarsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ] 
   before_action :find_index, only: %i[show destroy]
   def index
-    @cars = Car.all
+    if params[:query].present?
+      @cars = Car.where("model ILIKE ?", "%#{params[:query]}%")
+    else
+      @cars = Car.all
+    end
+
+    @markers = @cars.geocoded.map do |car|
+      {
+        lat: car.latitude,
+        lng: car.longitude
+      }
+    end
+
+
   end
 
   def show
@@ -34,6 +47,6 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit(:model, :price, :fuel_type, :consumption, :category, :seat_number, :transmission, :photo)
+    params.require(:car).permit(:model, :price, :fuel_type, :consumption, :category, :seat_number, :transmission, :photo, :address)
   end
 end

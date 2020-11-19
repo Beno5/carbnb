@@ -1,5 +1,9 @@
 
 <div class="container">
+
+
+
+
   <div class="row">
     <div class="column1">
       <h1 class="bold-text">Booking Overview</h1>
@@ -69,11 +73,16 @@
             <div class="infoheader vcenter">Total Amount</div>
             <div class="infocontent val vcenter">$ 1,960</div>
           </div>
-        <%= link_to "Confirm your booking", bookings_path, class: "btn btn-primary" %>
+        <%= simple_form_for [@car, @booking] do |f| %>
+<%= f.input :start_time %>
+<%= f.input :end_time %>
+  <%= f.submit "Confirm your booking", class: "btn btn-primary" %>
+<% end %>
         </div>
       </div>
       <br>
     </div>  
   <div>
+
 </div>
 <br>
