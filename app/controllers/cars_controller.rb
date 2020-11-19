@@ -5,6 +5,12 @@ class CarsController < ApplicationController
     @cars = Car.all
   end
 
+  def your_cars
+    @user = current_user
+    @cars = @user.Car.all
+
+  end
+
   def show
   end
 
