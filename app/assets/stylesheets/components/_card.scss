@@ -1,9 +1,19 @@
 // CARS
-.card-category {
-  // background-size: cover;
+.cards {
+  // display: flex;
+  // flex-direction: row;
+}
+
+.cards a {
+  text-decoration: none !important;
+}
+
+.Card {
+  background-size: contain !important;
   // background-position: center;
-  background-color: orange !important;
-  height: 180px;
+  background: orange !important;
+  height: 300px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   // justify-content: center;
@@ -14,20 +24,30 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 30px;
 }
 
-.car-name-card {
+.Card:hover {
+  border: 1.5px solid #FFF;
+}
+
+.Card__name {
 //  font-size: 24px;
 
 }
 
-.car-image-card img {
-  // height: 50px;
-  width: 100%;
+.Card h2 {
+  padding: 0px 20px;
 }
 
-.car-info-card {
-  padding: 21px;
+.Card__image {
+  height: 200px;
+  // width: 100%;
+  // background-size: auto;
+}
+
+.Card__info {
+  // padding: 21px 10px;
   // width: 100%;
   // display: flex;
   // justify-content: space-around;
