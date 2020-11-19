@@ -8,9 +8,10 @@
     <div class="column1">
       <h1 class="bold-text">Booking Overview</h1>
       <p class="bold-text">Here are the details of the car that you have booked:</p>
-      <%= simple_form_for [@car, @booking] do |f| %>
+      <%= simple_form_for [@car, @booking], :html => { class: "div-absolute" } do |f| %>
         <%= f.input :start_time %>
         <%= f.input :end_time %>
+        <%= link_to "Confirm your booking", bookings_path, class: "btn btn-primary" %>
       <% end %>
       <br>
     </div>
@@ -77,14 +78,12 @@
             <div class="infoheader vcenter">Total Amount</div>
             <div class="infocontent val vcenter">$ 1,960</div>
           </div>
-        
-  <%= link_to "Confirm your booking", bookings_path, class: "btn btn-primary" %>
-
         </div>
       </div>
       <br>
     </div>  
   <div>
-
+</div>
+</div>
 </div>
 <br>
