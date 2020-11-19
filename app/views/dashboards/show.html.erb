@@ -1,0 +1,7 @@
+<% @cars.each do |car| %>
+      <%= link_to car_path(car) do %>
+        <div class="card-category"> 
+          <div class="car-name-card"><%= car.model %></div>
+        <% end %>
+          </div>
+    <% end %>
