@@ -21,7 +21,7 @@
       <%= link_to car_path(car) do %>
         <div class="card-category"> 
           <div class="car-name-card"><%= car.model %></div>
-          <div class="car-image-card"> <%= cl_image_tag car.photo.key, height: 80, width: 150, crop: :fill %></div>
+        
           <div class="car-info-card">
             <p><%= car.price %>€ pro Tag</p>
             <p><%= car.consumption %> l/km</p>
