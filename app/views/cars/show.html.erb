@@ -1,30 +1,26 @@
 <div class="container">
 
   <div class="car-container-row">
-      <%# <% if @car.photo.attached? %>
-        <%# <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
-      <%# <% end %>
-      <div class="card-product" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @car.photo.key, height: 300, width: 400, crop: :fill %>')">
-        <div class="car-product-info">
-        <div class="car-product-info-details">Model: <%= @car.model %></div>
-        <div class="car-product-info-details">Price: <%= @car.price %></div>
-        <div class="car-product-info-details">Fuel: <%= @car.fuel_type %></div>
-        <div class="car-product-info-details">Cons:<%= @car.consumption %></div>
-        <div class="car-product-info-details">Category: <%= @car.category %></div>
-        <div class="car-product-info-details">Number of seats: <%= @car.seat_number %></div>
-        <div class="car-product-info-details">Transmition :<%= @car.transmission %></div>
+    <%# <% if @car.photo.attached? %>
+      <%# <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+    <%# <% end %>
+    <div class="card-product rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @car.photo.key, height: 300, width: 400, crop: :fill %>')">
+      <div class="car-product-info">
+        <div class="car-product-info-details"><%= @car.model %></div>
+        <div class="car-product-info-details"><%= @car.category %></div>
+        <div class="car-product-info-details"><%= @car.price %> €/day</div>
+        <div class="car-product-info-details"><%= @car.fuel_type %></div>
+        <div class="car-product-info-details"><%= @car.consumption.to_i %> L/100km</div>
+        <div class="car-product-info-details"><%= @car.seat_number %> seats</div>
+        <div class="car-product-info-details"><%= @car.transmission %></div>
       </div>
-</div>
-      <div class="card-booking">
-        <h2>Total price:</h2>
-        <h2>123€</h2>
+    </div>
+    <div class="card-booking">
+      <h4>Total price:</h4>
+      <h3>123€</h3>
 
-        <%= link_to "Book", new_car_booking_path(@car), class: "btn btn-primary" %>
-
- 
-
+      <%= link_to "Book", new_car_booking_path(@car), class: "btn btn-primary" %>
 
     </div>
-
   </div>
 </div>
