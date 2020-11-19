@@ -10,8 +10,8 @@ puts 'clearing db...'
 User.destroy_all
 Car.destroy_all
 puts "adding cars..."
-me = User.create!(email: "haha@heh.com", password: "123456")
-# bmw = Car.create!(model: "BMW", price: 50, fuel_type: "benzin", consumption: 9.75, category: "sport car", seat_number: 5, transmission: "automatik", user: me)
-# audi = Car.create!(model: "Audi", price: 50, fuel_type: "disel", consumption: 9.75, category: "sport car", seat_number: 5, transmission: "automatik", user: me)
-#  mercedes = Car.create!(model: "Mercedes", price: 50, fuel_type: "benzin", consumption: 9.75, category: "sport car", seat_number: 5, transmission: "automatik", user: me)
+# me = User.create!(email: "haha@heh.com", password: "123456")
+# bmw = Car.create!(model: "BMW", price: 50, fuel_type: "benzin", consumption: 9.75, category: "sport car", seat_number: 5, transmission: "automatik")
+# audi = Car.create!(model: "Audi", price: 50, fuel_type: "disel", consumption: 9.75, category: "sport car", seat_number: 5, transmission: "automatik")
+# mercedes = Car.create!(model: "Mercedes", price: 50, fuel_type: "benzin", consumption: 9.75, category: "sport car", seat_number: 5, transmission: "automatik")
 puts "done"
