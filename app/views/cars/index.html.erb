@@ -23,9 +23,10 @@
           <div class="car-name-card"><%= car.model %></div>
            <div class="car-image-card"> 
            <% if car.photo.attached? %>
-             <%= cl_image_tag car.photo.key, height: 80, width: 150, crop: :fill %></div>
+             <%= cl_image_tag car.photo.key, height: 80, width: 150, crop: :fill %>
              
            <% end %>
+           </div>
           <div class="car-info-card">
             <p><%= car.price %>€ pro Tag</p>
             <p><%= car.consumption %> l/km</p>
