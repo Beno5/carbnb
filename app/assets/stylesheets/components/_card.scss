@@ -64,6 +64,18 @@
 
 .card-booking {
   display: grid;
- 
+  text-align: right;
   color: black;
+}
+
+.card-booking h4 {
+  margin: 10px;
+}
+
+.card-booking h3 {
+  margin: 10px;
+}
+.card-booking a {
+  margin: 60px 10px 0px 10px;
+  padding: 40px 0px 0px 0px;
 }
