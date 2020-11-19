@@ -2,6 +2,20 @@
 
   <h1>cars</h1>
 
+
+<%= form_tag cars_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a car"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+<div class="index-container">
+
+
+     
   <div class="cards">
     <% @cars.each do |car| %>
       <%= link_to car_path(car) do %>
@@ -16,4 +30,10 @@
       <% end %>
     <% end %>
   </div>
+  <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
+</div>
 </div>
