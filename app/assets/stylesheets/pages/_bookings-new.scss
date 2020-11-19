@@ -1,0 +1,33 @@
+.column1 {
+  float: left;
+  width: 50%;
+  border: 15px solid rgb(221, 114, 16);
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 0 0 1em #222;
+}
+
+.column2 {
+  width: 40%;
+  border: 15px solid rgb(221, 114, 16);
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 0 0 1em #222;
+}
+
+.bold-text {
+  color: black;
+}
+
+h1 {
+  margin: 0 0 50px 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: darken(#e5e5e5, 50%);
+  border-bottom: solid 1px #e5e5e5;
+}
+
+p {
+  text-align: center;
+}
