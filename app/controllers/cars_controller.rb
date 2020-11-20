@@ -21,10 +21,12 @@ class CarsController < ApplicationController
          
         }
       end
-    end
+
+    end 
   end
 
   def show
+    @car = Car.find(params[:id])
   end
 
   def new
@@ -38,6 +40,16 @@ class CarsController < ApplicationController
       redirect_to car_path(@car)
     else
       render :new
+    end
+  end
+
+
+  def update
+    @car = Car.find(params[:id])
+    if @car.update(car_params)
+      redirect_to car_path(@car), notice: 'Car was successfully updated.'
+    else
+      render :edit
     end
   end
 
@@ -56,3 +68,14 @@ class CarsController < ApplicationController
     params.require(:car).permit(:model, :price, :fuel_type, :consumption, :category, :seat_number, :transmission, :photo, :address)
   end
 end
+
+  # def user_cars_index
+  #   @cars = Car.where(user_id: current_user)
+  # end
+
+  # def user_cars_edit
+  #   @cars = Car.where(user_id: current_user)
+  # end
+
+  # def user_cars_update
+  # end

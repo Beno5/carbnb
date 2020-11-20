@@ -40,12 +40,38 @@
 <div>
 
 <% @cars.each do |car| %>
-      <%= link_to car_path(car) do %>
-        <div class="card-category"> 
-          <div class="car-name-card"><%= car.model %></div>
-        <% end %>
+  <%= link_to car_path(car) do %>
+    <div class="card-category"> 
+      <div class="car-name-card"><%= car.model %></div>
+  <% end %>
+    </div>
+<% end %>
+
+
+<div class="index-container">
+  <div class="cards">
+    <% @cars.each do |car| %>
+        <div class="Card"> 
+          <h2 class="Card__name"><%= car.model %></h2>
+          <% if car.photo.attached? %>
+          <div class="Card__image" style="background: url('<%= cl_image_path car.photo.key, height: 80, width: 150, crop: :fill %>')">
           </div>
+          <% end %>
+          <div class="row cars-infos-user">
+            <div class="Card_btn">
+              <%= link_to 'Edit', cars_path(@car), class: "btn btn-primary" %>
+            </div>
+            <div class="Card__info">
+              <p><%= car.price %> €/day</p>
+              <p><%= car.consumption %> L/km</p>
+            </div>
+            <div class="Card_btn">
+              <%= link_to 'Delete', cars_path(@car), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
     <% end %>
+
 
     <div class="footer">
       <div class="footer-links">
@@ -56,3 +82,4 @@
         <a href="#"><i class="fab fa-linkedin mx-4"></i></a>
       </div>
     </div>
+
