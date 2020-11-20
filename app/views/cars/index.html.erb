@@ -49,7 +49,7 @@
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a car"
+          placeholder: "Enter address"
         %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
       </div>
@@ -68,7 +68,7 @@
                 </div>
               <% end %>
               <div class="Card__info">
-                <p><%= car.price %>€ pro Tag</p>
+                <p><%= car.price %> €/day </p>
                 <p><%= car.consumption %> l/km</p>
               </div>
           <% end %>
