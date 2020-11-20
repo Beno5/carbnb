@@ -43,13 +43,15 @@
 
   <div class="index-form">
     <%= form_tag cars_path, method: :get do %>
-    <h1 class="bold-text">cars</h1>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a car"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <h1 class="bold-text">cars</h1>
+      <div class="index-form-search">
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a car"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 
