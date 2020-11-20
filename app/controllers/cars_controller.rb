@@ -8,7 +8,6 @@ class CarsController < ApplicationController
         {
           lat: flat.latitude,
           lng: flat.longitude,
-          
         }
       end
       
@@ -18,7 +17,6 @@ class CarsController < ApplicationController
         {
           lat: car.latitude,
           lng: car.longitude
-         
         }
       end
 
