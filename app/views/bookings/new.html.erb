@@ -1,3 +1,43 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="logo">
+      <%= image_tag("0a110159-a9b4-4430-a4dd-f72093bfe816_200x200.png", size: "70x70") %>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-text active">
+
+       <%= link_to "Home", root_path, class: "nav-link" %></a>
+      </li>
+
+       <li class="nav-text">
+        <%= link_to "Add new car", new_car_path, class: "nav-link" %></a>
+      </li>
+    
+       <li class="nav-text">
+        <%= link_to "Cars", cars_path, class: "nav-link" %></a>
+      </li>
+       <li class="nav-text">
+        <%= link_to "Your cars", dashboards_show_path, class: "nav-link" %></a>
+      </li>
+       <li class="nav-text">
+        <%= link_to "Your bookings", bookings_path, class: "nav-link" %></a>
+
+      </li>
+      <li class="nav-text dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+           <%= link_to "Log out", destroy_user_session_path,  method: :delete, class: "dropdown-item" %></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div>
 
 <div class="container">
 
@@ -98,3 +138,14 @@
 </div>
 </div>
 <br>
+
+
+<div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github mx-4"></i></a>
+        <a href="#"><i class="fab fa-instagram mx-4"></i></a>
+        <a href="#"><i class="fab fa-facebook mx-4"></i></a>
+        <a href="#"><i class="fab fa-twitter mx-4"></i></a>
+        <a href="#"><i class="fab fa-linkedin mx-4"></i></a>
+      </div>
+    </div>
