@@ -38,9 +38,16 @@
   </div>
 </div>
 
+<% @cars.each do |car| %>
+  <%= link_to car_path(car) do %>
+    <div class="card-category"> 
+      <div class="car-name-card"><%= car.model %></div>
+  <% end %>
+    </div>
+<% end %>
 
-​
-​
+
+
 <div class="index-container">
   <div class="cards">
     <% @cars.each do |car| %>
@@ -69,6 +76,7 @@
 
 
 
+
     <div class="footer">
       <div class="footer-links">
         <a href="#"><i class="fab fa-github mx-4"></i></a>
@@ -78,3 +86,4 @@
         <a href="#"><i class="fab fa-linkedin mx-4"></i></a>
       </div>
     </div>
+
