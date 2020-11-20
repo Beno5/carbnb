@@ -46,7 +46,7 @@
       <%# <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
     <%# <% end %>
 
-    <div class="card-product rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @car.photo.key, height: 300, width: 400, crop: :fill %>')">
+    <div class="card-product rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @car.photo.key, crop: :fill %>')">
       <div class="car-product-info">
         <div class="car-product-info-details"><%= @car.model %></div>
         <div class="car-product-info-details"><%= @car.category %></div>
