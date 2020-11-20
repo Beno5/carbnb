@@ -11,6 +11,7 @@
 
 .Card {
   background: #286090;
+
   // height: 300px;
   width: 100%;
   display: flex;
@@ -152,3 +153,11 @@
   font-size: 40px !important;
 }
 
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
