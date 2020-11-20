@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ] 
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :find_index, only: %i[show destroy]
   def index
     if params[:query].present?
@@ -19,12 +19,7 @@ class CarsController < ApplicationController
         }
       end
     end
-    
-
- 
   end
-
-
 
   def show
   end
@@ -32,7 +27,7 @@ class CarsController < ApplicationController
   def new
     @car = Car.new
   end
-  
+
   def create
     @car = Car.new(car_params)
     @car.user = current_user
@@ -42,12 +37,12 @@ class CarsController < ApplicationController
       render :new
     end
   end
-  
-    def destroy
-      @car.destroy
-      redirect_to cars_path, notice: 'the car was successfully deleted.'
-    end
-  
+
+  def destroy
+    @car.destroy
+    redirect_to cars_path, notice: 'the car was successfully deleted.'
+  end
+
   private
 
   def find_index

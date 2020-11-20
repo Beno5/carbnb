@@ -19,7 +19,6 @@ class BookingsController < ApplicationController
     @car = Car.find(params[:car_id])
     @booking.car = @car
 
-    
     if @booking.save!
       redirect_to booking_path(@booking)
     else
@@ -36,14 +35,13 @@ class BookingsController < ApplicationController
   def destroy
   end
 
-
   private
 
   def find_index
     @booking = Booking.find(params[:id])
   end
 
- def review_params
-   params.require(:booking).permit(:start_time, :end_time)
- end
+  def review_params
+    params.require(:booking).permit(:start_time, :end_time)
+  end
 end
