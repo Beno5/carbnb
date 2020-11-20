@@ -10,7 +10,7 @@
 }
 
 .Card {
-  background: #2D789C;
+  background: #286090;
   // height: 300px;
   width: 100%;
   display: flex;
@@ -44,6 +44,7 @@
   background-size: cover !important;
   height: 200px;
   border-radius: 5px 5px 0 0;
+  background-color: #286090;
 }
 
 .Card__info {
@@ -51,6 +52,7 @@
   // width: 100%;
   // display: flex;
   // justify-content: space-around;
+  background-color: #286090;
 }
 
 
