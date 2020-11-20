@@ -8,6 +8,17 @@
     <div class="column1">
       <h1 class="bold-text">Booking Overview</h1>
       <p class="bold-text">Here are the details of the car that you have booked:</p>
+      <div class="centered">
+        <div class="car-overview"><strong>Car Model:</strong> <%= @car.model %></div>
+        <div class="car-overview"><strong>Car Category:</strong> <%= @car.category %></div>
+        <div class="car-overview"><strong>Car Price:</strong> <%= @car.price %> €/day</div>
+        <div class="car-overview"><strong>Fuel type:</strong> <%= @car.fuel_type %></div>
+        <div class="car-overview"><strong>Fuel Consumption:</strong> <%= @car.consumption.to_i %> L/100km</div>
+        <div class="car-overview"><strong>Number of Seats:</strong> <%= @car.seat_number %> seats</div>
+        <div class="car-overview"><strong>Transmission:</strong> <%= @car.transmission %></div>
+      </div>
+      <div class="car-overview-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @car.photo.key %>')">
+      </div>
       <%= simple_form_for [@car, @booking], :html => { class: "div-absolute" } do |f| %>
         <%= f.input :start_time %>
         <%= f.input :end_time %>
