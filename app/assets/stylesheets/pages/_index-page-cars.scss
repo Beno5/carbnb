@@ -19,9 +19,18 @@
   // height: 800px;
 }
 
-// .index-form {
-//   width: auto !important;
-// }
+ .index-form {
+  width: 500px;
+    height: 200px;
+    margin-left: 300px;
+
+ }
+
+.btn-index {
+  width: 100px;
+  margin-left: 150px;
+  margin-top: 10px;
+}
 
 // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
@@ -43,11 +52,13 @@
 // }
 
 // // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) {
-//   .cards {
-//     grid-template-columns: 1fr 1fr 1fr;
-//   }
-// }
+ @media (min-width: 992px) {
+   .cards {
+      display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px
+ }
+ }
 
 // // Extra large devices (large desktops, 1200px and up)
 // @media (min-width: 1200px) {

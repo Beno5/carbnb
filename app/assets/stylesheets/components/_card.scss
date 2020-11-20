@@ -11,7 +11,7 @@
 
 .Card {
   // background-position: center;
-  background: orange !important;
+
   // height: 300px;
   width: 100%;
   display: flex;
@@ -140,4 +140,13 @@
   align-items: center;
   justify-content: center;
   font-size: 40px !important;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
