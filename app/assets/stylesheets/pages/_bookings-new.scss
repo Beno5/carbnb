@@ -1,24 +1,21 @@
 .column1 {
   float: left;
   width: 50%;
-  border: 5px solid;
   padding: 0px;
   margin: 20px;
   box-shadow: 0 0 1em #222;
-  height: 900px;
+  height: 885px;
   position: relative;
-  display: table;
   box-sizing:border-box;
   background-color: #E8E8E8;
 }
 
 .column2 {
   width: 40%;
-  border: 5px solid;
   padding: 50px;
   margin: 20px;
   box-shadow: 0 0 1em #222;
-  height: 900px;
+  height: 885px;
   position: relative;
   display: inline-block;
   box-sizing:border-box;
@@ -40,4 +37,10 @@ h1 {
 
 p {
   text-align: center;
+}
+
+.car-overview-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
 }

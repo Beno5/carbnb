@@ -36,3 +36,19 @@ form {
 // .form-input [type=text] {
 //   max-width: 30px !important;
 // }
+
+.index-page {
+  margin-top: 100px;
+  margin-bottom: 0;
+height: 400px;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-self: center
+;
+}
+
+.index-button {
+  margin-left: 450px;
+  width: 150px;
+}
