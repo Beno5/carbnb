@@ -1,24 +1,28 @@
 .column1 {
   float: left;
   width: 50%;
-  border: 15px solid rgb(221, 114, 16);
+  border: 5px solid;
   padding: 0px;
   margin: 20px;
   box-shadow: 0 0 1em #222;
   height: 900px;
   position: relative;
   display: table;
+  box-sizing:border-box;
+  background-color: #E8E8E8;
 }
 
 .column2 {
   width: 40%;
-  border: 15px solid rgb(221, 114, 16);
+  border: 5px solid;
   padding: 50px;
   margin: 20px;
   box-shadow: 0 0 1em #222;
   height: 900px;
   position: relative;
   display: inline-block;
+  box-sizing:border-box;
+  background-color: #E8E8E8;
 }
 
 .bold-text {
