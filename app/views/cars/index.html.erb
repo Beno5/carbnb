@@ -63,7 +63,7 @@
           <div class="Card"> 
           <%= link_to car_path(car) do %>
               <% if car.photo.attached? %>
-                <div class="Card__image" style="background: url('<%= cl_image_path car.photo.key, height: 80, width: 150, crop: :fill %>')">
+                <div class="Card__image" style="background: url('<%= cl_image_path car.photo.key, crop: :fill %>')">
                   <h2 class="Card__name"><%= car.model %></h2>
                 </div>
               <% end %>

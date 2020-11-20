@@ -3,7 +3,7 @@ class CarsController < ApplicationController
   before_action :find_index, only: %i[show destroy]
   def index
     if params[:query].present?
-      @cars = Car.where("model ILIKE ?", "%#{params[:query]}%")
+      @cars = Car.where("address ILIKE ?", "%#{params[:query]}%")
       @markers = @cars.geocoded.map do |flat|
         {
           lat: flat.latitude,
@@ -77,3 +77,6 @@ end
 
   # def user_cars_update
   # end
+
+
+ 
