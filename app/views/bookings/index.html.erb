@@ -40,13 +40,14 @@
 <div>
 
 <div class="container">
-
+<p>✅ Your booking is confirmed!</p>
+<p>Thanks for renting! Your order confirmation </p>
 <% @bookings.each do |booking| %>
-<%= booking.car.model %>
-<%= booking.user.email %>
-<br>
+  <%= booking.car.model %>
 <% end %>
- 
+
+<p>has been sent to you.</p>
+
 </div>
  
 <div class="footer">
