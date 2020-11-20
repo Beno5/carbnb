@@ -8,6 +8,7 @@ class CarsController < ApplicationController
         {
           lat: flat.latitude,
           lng: flat.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { car: car })
         }
       end
       
@@ -16,13 +17,15 @@ class CarsController < ApplicationController
       @markers = @cars.geocoded.map do |car|
         {
           lat: car.latitude,
-          lng: car.longitude
+          lng: car.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { car: car })
         }
       end
 
     end 
   end
 
+ 
   def show
     @car = Car.find(params[:id])
   end
