@@ -4,10 +4,10 @@ class CarsController < ApplicationController
   def index
     if params[:query].present?
       @cars = Car.where("address ILIKE ?", "%#{params[:query]}%")
-      @markers = @cars.geocoded.map do |flat|
+      @markers = @cars.geocoded.map do |car|
         {
-          lat: flat.latitude,
-          lng: flat.longitude,
+          lat: car.latitude,
+          lng: car.longitude,
           infoWindow: render_to_string(partial: "info_window", locals: { car: car })
         }
       end
