@@ -38,19 +38,9 @@
   </div>
 </div>
 
-<% @cars.each do |car| %>
-  <%= link_to car_path(car) do %>
-    <div class="card-category"> 
-      <div class="car-name-card"><%= car.model %></div>
-  <% end %>
-    </div>
-<% end %>
-
-
-
-<div class="index-container">
+<div class="container">
   <div class="cards">
-    <% @cars.each do |car| %>
+<% @cars.each do |car| %>
         <div class="Card"> 
           <h2 class="Card__name"><%= car.model %></h2>
           <% if car.photo.attached? %>
@@ -71,10 +61,18 @@
           </div>
         </div>
     <% end %>
-  </div>
+
+</div>
 </div>
 
 
+<div class="index-container">
+
+    
+  </div>
+
+
+</div>
 
 
     <div class="footer">
