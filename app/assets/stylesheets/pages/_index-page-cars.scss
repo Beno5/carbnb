@@ -22,12 +22,21 @@
 @media (min-width: 768px) {
 
   .index-container {
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    // grid-gap: 16px;
+    // grid-template-columns: 1fr 1fr;
   }
-  .cards {
-    grid-template-columns: 1fr 1fr;
+
+  .column {
+    flex: 50% !important;
+  }
+
+  // .cards {
+  //   grid-template-columns: 1fr 1fr;
+  // }
+
+  body {
+    background: red !important;
   }
 }
 
