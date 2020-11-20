@@ -57,10 +57,8 @@
         <div class="car-product-info-details"><%= @car.transmission %></div>
       </div>
     </div>
-    <div class="column-card-book rounded-lg" >
-
-      <%= link_to "Book", new_car_booking_path(@car), class: "btn btn-primary" %>
-
+    <div class="column-card-book">
+      <%= link_to "Book", new_car_booking_path(@car), class: "btn btn-primary book-car-button" %>
     </div>
   </div>
 </div>
